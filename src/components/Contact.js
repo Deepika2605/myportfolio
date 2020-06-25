@@ -43,7 +43,7 @@ const InputField = withStyles({
 
 
 const handleSubmit = function(name, email, company) {
-    alert("✔️ This works on every component! "+name+" "+email+" "+company);
+    alert("Your message has been sent to Deepika Sathianarayanan");
 
     let templateParams = {
         from_name: email,
