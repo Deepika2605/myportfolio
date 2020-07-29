@@ -5,7 +5,7 @@ import Home from './components';
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Resume from './components/Resume'
 import Portfolio from './components/Portfolio';
-import Contacts from './components/Contact';
+import Contacts from './components/Contact2';
 
 function App()  {
   return(

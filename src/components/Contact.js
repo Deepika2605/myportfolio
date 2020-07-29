@@ -4,6 +4,7 @@ import {TextField, Typography, Button, Grid, Box} from "@material-ui/core"
 import SendIcon from "@material-ui/icons/Send";
 import Navbar from './Navbar';
 import * as emailjs from 'emailjs-com';
+import Smiley from './Smiley'
 
 const useStyles = makeStyles(theme=> ({
     form: {
@@ -95,6 +96,7 @@ const Contact = () => {
                     </Button>
                 </Box>
             </Grid>
+            <Smiley />
         </Box>
     )
 }
