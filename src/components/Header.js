@@ -1,6 +1,6 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/core/styles"
-import { Typography, Grid, Avatar, Box } from "@material-ui/core";
+import { Typography, Grid, Avatar, Box, BottomNavigation } from "@material-ui/core";
 import Typed from "react-typed";
 import avatar from "../profilePhoto.jpg";
 
@@ -31,8 +31,9 @@ const useStyles = makeStyles(theme=> ({
 const Header = () => {
     const classes = useStyles()
     return (
+        <>
         <Box className={classes.typedContainer}>
-            <Grid container justify="center">
+            <Grid container justify="center" >
             <Avatar className={classes.avatar} src={avatar} alt="Deepika Sathianarayanan"/>
             </Grid>
             
@@ -46,7 +47,11 @@ const Header = () => {
                 backSpeed={60}
                 loop/>
             </Typography>
+            <BottomNavigation width="auto" style={{background: "transparent"}} >
+                <Typography className={classes.subtitle} variant="caption">Developed By: Deepika Sathianarayanan</Typography>
+            </BottomNavigation>
         </Box>
+        </>
     )
 }
 

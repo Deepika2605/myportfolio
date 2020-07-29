@@ -1,0 +1,87 @@
+.smiley
+{
+    top: 20%;
+    left: 36%;
+    position: absolute;
+}
+.face
+{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.face::before
+{
+    content: '';
+    position: absolute;
+    top: 210px;
+    width: 150px;
+    height: 10px;
+    background: #142850;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transition: 0.5s;
+} 
+.eyes
+{
+    position: relative;
+    top: -40px;
+    display: flex;
+}
+.eyes .eye
+{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: block;
+    background: #fff;
+    margin: 0 15px;
+    border-radius: 50%;
+}
+.eyes .eye::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height:40px;
+    background: #333;
+    border-radius: 50%;
+
+}
+.submitButton
+{
+    margin-top: 1rem;
+    color: #142850;
+    border-color: #142850;
+    background: transparent;
+    width: 100%;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    border-radius: 10%;        
+}
+.submitButton:hover{
+    background: rgb(218, 225, 231, 20%);
+
+}
+.contact{
+    top: 30%;
+    left: 66%;
+    position: absolute;
+}
+.contact:hover + .smiley .face::before
+{
+    top: 180px;
+    width: 150px;
+    height: 70px;
+    background: white;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+} 
