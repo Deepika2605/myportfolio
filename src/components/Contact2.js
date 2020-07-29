@@ -117,18 +117,18 @@ const Contact = () => {
                     <Typography variant="h6" className={classes.data}> +91 9036649136</Typography>
                 </Grid>
                 <Grid className={classes.form} item xs={12} sm={6} md={6}>
-                    <form className="contact" method="POST" data-netlify="true">
+                    <form name="contact" className="contact" method="POST" data-netlify="true">
                         <Typography variant="h5" style={{ color: "#142850", fontFamily: "cursive", textAlign: "center", textTransform: "uppercase" }}>
                             Hire or Contact Me </Typography>
-                        <InputField fullWidth={true} label="Name" variant="outlined" inputProps={{ style: { color: "#142850" } }} margin="dense" size="medium"
+                        <InputField name="name" fullWidth={true} label="Name" variant="outlined" inputProps={{ style: { color: "#142850" } }} margin="dense" size="medium"
                             value={name}
                             onChange={(e) => { setName(e.target.value) }} />
                         <br />
-                        <InputField fullWidth={true} label="Email" variant="outlined" inputProps={{ style: { color: "#142850" } }} margin="dense" size="medium"
+                        <InputField name="email" fullWidth={true} label="Email" variant="outlined" inputProps={{ style: { color: "#142850" } }} margin="dense" size="medium"
                             value={email}
                             onChange={(e) => { setEmail(e.target.value) }} />
                         <br />
-                        <InputField fullWidth={true} label="Company" variant="outlined" inputProps={{ style: { color: "#142850" } }} margin="dense" size="medium"
+                        <InputField name="company" fullWidth={true} label="Company" variant="outlined" inputProps={{ style: { color: "#142850" } }} margin="dense" size="medium"
                             value={company}
                             onChange={(e) => { setCompany(e.target.value) }} />
                         <br />
