@@ -3,10 +3,8 @@ import {Link} from "react-router-dom";
 import MobilRightMenuSlider from "@material-ui/core/Drawer";
 import { AssignmentInd, Home, Apps, ContactMail } from "@material-ui/icons";
 import MenuIcon from '@material-ui/icons/Menu';
-import { AppBar, Toolbar, ListItem, IconButton, ListItemText, Avatar, Divider, List, Typography, Box, ListItemIcon} from "@material-ui/core";
+import { Toolbar, ListItem, IconButton, ListItemText, List, Box, ListItemIcon} from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
-
-import avatar from "../profilePhoto.jpg";
 import { Footer } from './Footer';
 
 //Css
@@ -19,8 +17,8 @@ const useStyles = makeStyles(theme=>({
     avatar: {
         display: "block",
         margin: "0.5rem auto",
-        width: theme.spacing(13),
-        height: theme.spacing(13)
+        width: theme.spacing(16),
+        height: theme.spacing(16)
     },
     listItem: {
         color: "#dae1e7"
@@ -67,8 +65,6 @@ const Navbar = () => {
         className={classes.menuSliderContainer} 
         component="div"
         onClick={toggleSlider("right", false)}>
-            <Avatar className={classes.avatar} src={avatar} alt="Deepika Sathianarayanan"/>
-            <Divider />
             <List>
                 {menuItems.map((lsItem, key)=>(
                 <ListItem button key={key} component={Link} to={lsItem.listPath}>
@@ -85,14 +81,11 @@ const Navbar = () => {
         <>
         
         <Box component="nav">
-            <AppBar position="static" style={{background: "#142850"}}>
+            <div position="static">
                 <Toolbar>
                     <IconButton onClick={toggleSlider("right", true)}>
-                        <MenuIcon style={{color: "#00909e", fontSize: "40px"}}/>
+                        <MenuIcon style={{color: "#191970", fontSize: "40px"}}/>
                     </IconButton>
-                    <Typography variant="h5" style={{color: "#dae1e7", fontFamily: "proxima-nova, sans-serif"}}>
-                        PORTFOLIO
-                    </Typography>
                     <MobilRightMenuSlider
                     anchor="left"
                     open={state.right}
@@ -101,7 +94,7 @@ const Navbar = () => {
                         <Footer />
                     </MobilRightMenuSlider>
                 </Toolbar>
-            </AppBar>
+            </div>
         </Box>
         </>
     )
